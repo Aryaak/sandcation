@@ -1,12 +1,11 @@
-
 const colors = require('tailwindcss/colors')
 module.exports = {
   purge: {
     content: [
-      `components/**/*.{vue,js}`,
-      `layouts/**/*.vue`,
-      `pages/**/*.vue`,
-      `plugins/**/*.{js,ts}`,
+      `components/*/.{vue,js}`,
+      `layouts/*/.vue`,
+      `pages/*/.vue`,
+      `plugins/*/.{js,ts}`,
       `nuxt.config.{js,ts}`
     ]
   },
@@ -52,15 +51,31 @@ module.exports = {
       extra: '0.8em'
     },
     fontFamily: {
-      'open-sans': ['Open Sans', 'sans-serif']
+      'open-sans': ['Open Sans', 'sans-serif'],
+      'poppins' : ['poppins']
     },
     height: {
        'sm': '8px',
        'md': '16px',
        'lg': '24px',
        'xl': '48px',
-       '2xl' : '26rem'
-      }
+       '2xl' : '26rem',
+       '3xl' : '45rem'
+      },
+
+      fontWeight: {
+        hairline: 100,
+        'extra-light': 100,
+        thin: 200,
+         light: 300,
+         normal: 400,
+         medium: 500,
+        semibold: 600,
+         bold: 700,
+        extrabold: 800,
+        'extra-bold': 800,
+         black: 900,
+       }
   },
   variants: {
     extend: {},
