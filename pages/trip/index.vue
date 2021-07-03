@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto mt-10">
+  <div class="xl:container mx-auto mt-10 xl:px-16 px-10">
     <Header active="trip" />
     <Footer />
   </div>

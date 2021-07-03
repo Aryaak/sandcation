@@ -1,19 +1,56 @@
 <template>
-  <div class="container mx-auto mt-10">
+  <div class="xl:container mx-auto mt-10 xl:px-16 px-10">
     <Header active="home" />
-    <div class="relative w-full mt-10 mb-20">
-      <div class="absolute left-20 top-40 text-white">
-        <h1 class="font-black text-6xl">
+    <div class="relative w-full mt-10 xl:mb-20 mb-10">
+      <div
+        class="
+          absolute
+          text-white
+          font-bold
+          xl:text-6xl
+          text-3xl
+          xl:left-20
+          xl:top-40
+          left-10
+          top-10
+        "
+      >
+        <h1 class="font-black">
           Staycation Seru <br />
           Dalam Satu Platform.
         </h1>
-        <p class="text-3xl">Cari dan booking pengalaman terbaik.</p>
-        <button class="bg-yellow rounded-2xl mt-14 px-8 py-2 text-xl">
+        <p class="xl:text-3xl text-sm">Cari dan booking pengalaman terbaik.</p>
+        <button
+          class="
+            bg-yellow
+            rounded-2xl
+            xl:mt-14
+            mt-10
+            px-8
+            py-2
+            xl:text-xl
+            text-lg
+          "
+        >
           Booking sekarang
         </button>
       </div>
       <img src="~assets/img/home-hero.png" class="w-full rounded-3xl" />
-      <div class="hero-card py-8 px-8 rounded-3xl shadow-lg">
+      <div
+        class="
+          xl:px-24
+          px-5
+          hero-card
+          absolute
+          align-center
+          xl:w-12/12
+          -bottom-14
+          bg-white
+          shadow-lg
+          py-8
+          rounded-3xl
+        "
+      >
         <ul class="flex gap-10">
           <li class="nav_active">Villa</li>
           <li>Apartemen</li>
@@ -26,7 +63,7 @@
               <div>
                 <img src="~assets/img/send.png" />
               </div>
-              <h4 class="text-2xl font-bold">Lokasi</h4>
+              <h4 class="xl:text-2xl font-bold">Lokasi</h4>
             </div>
             <p class="text-grey ml-8">Mau nginap dimana?</p>
           </div>
@@ -35,7 +72,7 @@
               <div>
                 <img src="~assets/img/calendar.png" />
               </div>
-              <h4 class="text-2xl font-bold">Check in</h4>
+              <h4 class="xl:text-2xl font-bold">Check in</h4>
             </div>
             <p class="text-grey ml-8">Pilih tanggal</p>
           </div>
@@ -44,7 +81,7 @@
               <div>
                 <img src="~assets/img/calendar.png" />
               </div>
-              <h4 class="text-2xl font-bold">Check out</h4>
+              <h4 class="xl:text-2xl font-bold">Check out</h4>
             </div>
             <p class="text-grey ml-8">Pilih tanggal</p>
           </div>
@@ -53,7 +90,7 @@
               <div>
                 <img src="~assets/img/users.png" />
               </div>
-              <h4 class="text-2xl font-bold">Tamu</h4>
+              <h4 class="xl:text-2xl font-bold">Tamu</h4>
             </div>
             <p class="text-grey ml-8">Jumlah orang</p>
           </div>

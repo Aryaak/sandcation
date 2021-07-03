@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-hidden">
+  <div class="overflow-hidden xl:mb-0 mb-14">
     <img src="~assets/img/hotel.jpg" class="w-full mb-5 rounded-xl" />
     <p class="text-grey">Hotel</p>
     <div class="flex items-center justify-between">

@@ -1,7 +1,8 @@
 <template>
   <div class="grid grid-cols-2 h-full">
     <Loading />
-    <div>
+    <div class="relative">
+      <h1 class="absolute right-24">Mari Liburan bersama Sandcation</h1>
       <img class="h-full" src="~/assets/img/login-image.jpg" />
     </div>
     <div>
