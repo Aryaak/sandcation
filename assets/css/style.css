@@ -71,3 +71,19 @@
   transition: 0.5s right;
   right: 0;
 }
+
+.sea-img{
+  background-image: url('~/assets/img/laut.png');
+  background-size: cover;
+  max-height: max-content;
+}
+
+.sea-title{
+  font-size: 50px;
+  margin-top: 14rem;
+  font-weight: 900;
+}
+
+.paket-text{
+  text-align: center;
+}
