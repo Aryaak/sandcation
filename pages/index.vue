@@ -1,35 +1,67 @@
 <template>
-  <div class="min-h-screen">
-    <div class="grid grid-cols-12 gap-4 mt-5">
-        <div class="col-start-2 col-span-3 ml-9">
-          <div class="flex col-span-3">
-            <img src="~/assets/img/Layer 2.png" class="" alt="">
-            <p class="font-bold text-xl ml-6">sandcation</p>
+  <div class="container mx-auto mt-10">
+    <Header active="home" />
+    <div class="relative w-full mt-10 mb-20">
+      <div class="absolute left-20 top-40 text-white">
+        <h1 class="font-black text-6xl">
+          Staycation Seru <br />
+          Dalam Satu Platform.
+        </h1>
+        <p class="text-3xl">Cari dan booking pengalaman terbaik.</p>
+        <button class="bg-yellow rounded-2xl mt-14 px-8 py-2 text-xl">
+          Booking sekarang
+        </button>
+      </div>
+      <img src="~assets/img/home-hero.png" class="w-full rounded-3xl" />
+      <div class="hero-card py-8 px-8 rounded-3xl shadow-lg">
+        <ul class="flex gap-10">
+          <li class="nav_active">Villa</li>
+          <li>Apartemen</li>
+          <li>Glamping</li>
+          <li>Hotel</li>
+        </ul>
+        <div class="flex gap-10 mt-7 w-full">
+          <div>
+            <div class="flex gap-3 items-center">
+              <div>
+                <img src="~assets/img/send.png" />
+              </div>
+              <h4 class="text-2xl font-bold">Lokasi</h4>
+            </div>
+            <p class="text-grey ml-8">Mau nginap dimana?</p>
           </div>
-
-        </div>
-        <div class="col-start-7 col-span-6">
-          <ul class="flex text-lg" >
-              <li class="mr-16 border-b-2 border-black">Home</li>
-              <li class="mr-16 text-gray-400">Booking penginapan</li>
-              <li class="mr-16 text-gray-400">paket trip</li>
-              <li class="mr-16 bg-yellow pr-2 pl-2 text-white rounded-md">masuk </li>
-          </ul>
-        </div>
-    </div>
-
-    <div class="grid grid-cols-12 gap-4 mt-5 relative" >
-      <div class="col-span-10 col-start-2">
-        <img src="~/assets/img/Rectangle 8.png" class="rounded-3xl h-3xl z-0 absolute" alt="">
-        <div class="absolute top-40 left-40">
-          <h1 class="z-1 col-start-2   font-bold text-white text-6xl">
-              Staycation Seru <br> Dalam Satu Platform
-          </h1>
-          <p class="z-1 text-white "> cari dan booking pengalaman terbaik</p>
-          <button class="text-white bg-yellow mt-12 px-5 py-3 rounded-2xl">Booking Sekarang</button>
+          <div>
+            <div class="flex gap-3 items-center">
+              <div>
+                <img src="~assets/img/calendar.png" />
+              </div>
+              <h4 class="text-2xl font-bold">Check in</h4>
+            </div>
+            <p class="text-grey ml-8">Pilih tanggal</p>
+          </div>
+          <div>
+            <div class="flex gap-3 items-center">
+              <div>
+                <img src="~assets/img/calendar.png" />
+              </div>
+              <h4 class="text-2xl font-bold">Check out</h4>
+            </div>
+            <p class="text-grey ml-8">Pilih tanggal</p>
+          </div>
+          <div>
+            <div class="flex gap-3 items-center">
+              <div>
+                <img src="~assets/img/users.png" />
+              </div>
+              <h4 class="text-2xl font-bold">Tamu</h4>
+            </div>
+            <p class="text-grey ml-8">Jumlah orang</p>
+          </div>
         </div>
       </div>
     </div>
+
+    <Footer />
   </div>
 </template>
 
