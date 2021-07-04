@@ -15,11 +15,11 @@
           top-10
         "
       >
-        <h1 class="font-black">
+        <h1 class="xl:font-black sm:font-thin  xl:text-7xl sm:text-xs">
           Staycation Seru <br />
           Dalam Satu Platform.
         </h1>
-        <p class="xl:text-3xl text-sm">Cari dan booking pengalaman terbaik.</p>
+        <p class="xl:text-3xl sm:text-sm">Cari dan booking pengalaman terbaik.</p>
         <button
           class="
             bg-yellow
@@ -35,67 +35,58 @@
           Booking sekarang
         </button>
       </div>
-      <img src="~assets/img/home-hero.png" class="w-full rounded-3xl" />
-      <div
-        class="
-          xl:px-24
-          px-5
-          hero-card
-          absolute
-          align-center
-          xl:w-12/12
-          -bottom-14
-          bg-white
-          shadow-lg
-          py-8
-          rounded-3xl
-        "
-      >
-        <ul class="flex gap-10">
-          <li class="nav_active">Villa</li>
-          <li>Apartemen</li>
-          <li>Glamping</li>
-          <li>Hotel</li>
-        </ul>
-        <div class="flex gap-10 mt-7 w-full">
-          <div>
-            <div class="flex gap-3 items-center">
-              <div>
-                <img src="~assets/img/send.png" />
-              </div>
-              <h4 class="xl:text-2xl font-bold">Lokasi</h4>
+      <img src="~assets/img/home-hero.png" class="w-full rounded-3xl z-0" />
+
+  <div class="bg-white rounded-xl -mt-8 shadow-xl relative mx-12 pb-8">
+    <div class="grid grid-cols-12 gap-3 mx-12 ">
+            <div class="col-span-12  rounded-t-2xl mx-auto input-width">
+                <div class="grid grid-cols-12">
+                  <p class="font-popins mt-4 text-black border-b-2 border-black col-span-2 px-5 text-center">Villa</p>
+                  <p class="font-popins mt-4 text-gray-400 col-span-2 px-5 text-center">Apartement</p>
+                  <p class="font-popins mt-4 text-gray-400 col-span-2 px-5 text-center">Glamping</p>
+                  <p class="font-popins mt-4 text-gray-400 col-span-2 px-5 text-center">Hotel</p>
+                  <p class="font-popins mt-4 text-gray-400 col-span-2 px-5 text-center0">Paket trip</p>
+                </div>
             </div>
-            <p class="text-grey ml-8">Mau nginap dimana?</p>
-          </div>
-          <div>
-            <div class="flex gap-3 items-center">
-              <div>
-                <img src="~assets/img/calendar.png" />
-              </div>
-              <h4 class="xl:text-2xl font-bold">Check in</h4>
+        </div>
+
+        <div class="grid grid-cols-12 gap-3mx-12">
+            <div class="col-span-12   rounded-b-2xl mx-auto input-width">
+                <div class="grid grid-cols-12 mt-4 px-8">
+                  <div class="flex col-span-3 px-5 text-left">
+                    <img class="w-lg mt-3 mr-2 h-lg" src="~/assets/img/send.png" alt="">
+                    <div>
+                       <p class="text-2xl font-bold font-poppins">Lokasi</p>
+                        <p class="text-sm text-gray-400">mau nginap dimana?</p>
+                    </div>
+                  </div>
+                  <div class="flex  col-span-3 px-5 text-left">
+                    <img class="w-lg mt-3 mr-2 h-lg" src="~/assets/img/calendar.png" alt="">
+                    <div>
+                       <p class="text-2xl font-bold font-poppins">Check In</p>
+                        <p class="text-sm text-gray-400">pilih tanggal?</p>
+                    </div>
+                  </div>
+                  <div class="flex  col-span-3 px-5 text-left">
+                    <img class="w-lg mt-3 mr-2 h-lg" src="~/assets/img/calendar.png" alt="">
+                    <div>
+                       <p class="text-2xl font-bold font-poppins">Check Out</p>
+                        <p class="text-sm text-gray-400">pilih tanggal?</p>
+                    </div>
+                  </div>
+                  <div class="flex col-span-3 px-5 text-left">
+                    <img class="w-lg mt-3 mr-2 h-lg" src="~/assets/img/users.png" alt="">
+                    <div>
+                       <p class="text-2xl font-bold font-poppins">Tamu</p>
+                        <p class="text-sm text-gray-400">Jumlah Orang</p>
+                    </div>
+                  </div>
+                  <div class="col-span-2 px-5 text-center0"></div>
+                </div>
             </div>
-            <p class="text-grey ml-8">Pilih tanggal</p>
-          </div>
-          <div>
-            <div class="flex gap-3 items-center">
-              <div>
-                <img src="~assets/img/calendar.png" />
-              </div>
-              <h4 class="xl:text-2xl font-bold">Check out</h4>
-            </div>
-            <p class="text-grey ml-8">Pilih tanggal</p>
-          </div>
-          <div>
-            <div class="flex gap-3 items-center">
-              <div>
-                <img src="~assets/img/users.png" />
-              </div>
-              <h4 class="xl:text-2xl font-bold">Tamu</h4>
-            </div>
-            <p class="text-grey ml-8">Jumlah orang</p>
-          </div>
         </div>
       </div>
+
     </div>
 
      <div class="paket-text">
