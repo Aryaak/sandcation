@@ -19,6 +19,7 @@ export const getters = {
 
 export const actions = {
     async fetchHostels({rootState,commit}){
+        axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
         await axios.get(rootState.base_api_url + 'hostels')
                 .then(async (res) => {
                     await commit('setHostels', res.data.data);
