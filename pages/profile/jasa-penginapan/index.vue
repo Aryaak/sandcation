@@ -1,5 +1,5 @@
 <template>
-  <div class="xl:container mx-auto mt-10 xl:px-16 px-1 mb-10">
+  <div class="xl:container mt-10 xl:px-16 mx-4 px-1 mb-10">
     <Header />
 
     <p v-if="!validate" class="text-danger mt-10 italic">
@@ -28,7 +28,7 @@
       <p class="text-black font-poppins text-3xl mt-8">Detail Penginapan</p>
       <br />
       <div class="grid grid-cols-12 gap-8 mt-5">
-        <div class="col-span-12">
+        <div class="xl:col-span-12 xs:col-span-10">
           <label class="text-black font-poppins text-xl">Nama Penginapan</label>
           <input
             type="text"
@@ -49,7 +49,7 @@
         </div>
       </div>
       <div class="grid grid-cols-12 gap-8 mt-5">
-        <div class="col-span-12">
+        <div class="xl:col-span-12 xs:col-span-10">
           <label class="text-black font-poppins text-xl">Alamat</label>
           <input
             type="text"
@@ -71,7 +71,7 @@
       </div>
 
       <div class="grid grid-cols-12 gap-8 mt-5">
-        <div class="col-span-12">
+        <div class="xl:col-span-12 xs:col-span-10">
           <label class="text-black font-poppins text-xl"
             >Deskripsi Penginapan</label
           >
@@ -82,7 +82,7 @@
       </div>
 
       <div class="grid grid-cols-12 gap-8 mt-5">
-        <div class="col-span-12">
+        <div class="xl:col-span-12 xs:col-span-10">
           <label class="text-black font-poppins text-xl">Pelayanan</label>
           <client-only placeholder="loading...">
             <ckeditor-nuxt v-model="service" :config="editorConfig" />
@@ -91,7 +91,7 @@
       </div>
 
       <div class="grid grid-cols-12 gap-8 mt-5">
-        <div class="col-span-12">
+        <div class="xl:col-span-12 xs:col-span-10">
           <label class="text-black font-poppins text-xl">Kategori</label>
           <select
             class="block bg-gray-200 normal-height input-width rounded-xl px-5"
@@ -105,7 +105,7 @@
       </div>
 
       <div class="grid grid-cols-12 gap-8 mt-5">
-        <div class="col-span-12">
+        <div class="xl:col-span-12 xs:col-span-10">
           <label class="text-black font-poppins text-xl">Tipe Kamar</label>
           <input
             type="text"
@@ -116,7 +116,7 @@
       </div>
 
       <div class="grid grid-cols-12 gap-8 mt-5">
-        <div class="col-span-12">
+        <div class="xl:col-span-12 xs:col-span-10">
           <label class="text-black font-poppins text-xl">Harga</label>
           <input
             type="number"
@@ -127,7 +127,7 @@
       </div>
 
       <div class="grid grid-cols-12 gap-8 mt-5">
-        <div class="col-span-12">
+        <div class="xl:col-span-12 xs:col-span-10">
           <label class="text-black font-poppins text-xl">Nomor telepon</label>
           <input
             type="text"
@@ -137,20 +137,20 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-12 mt-5">
-        <div class="col-span-4 col-start-10">
-          <button class="bg-yellow rounded-lg text-white text-xl w-28">
-            Edit
-          </button>
-          <button
-            @click="submit()"
-            class="bg-yellow rounded-lg text-white text-xl w-28"
-          >
-            Ajukan
-          </button>
-        </div>
+          <div class="grid grid-cols-12 mt-6 mb-24">
+            <div class="xl:col-span-4 xs:col-span-12 xl:col-start-10 xs:col-start-2 ">
+              <button class="bg-yellow rounded-lg text-white xl:text-xl xs:text-xs w-28">
+                Edit
+              </button>
+              <button
+                @click="submit()"
+                class="bg-yellow rounded-lg xl:text-xl xs:text-xs text-white w-28"
+              >
+                Ajukan
+              </button>
+            </div>
+          </div>
       </div>
-    </div>
   </div>
 </template>
 
