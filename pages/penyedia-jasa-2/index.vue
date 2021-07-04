@@ -72,6 +72,12 @@
            </div>
         </div>
 
+      <div class="grid grid-cols-12 mt-5">
+          <div class="col-span-4 col-start-10">
+            <button class="bg-yellow rounded-lg text-white text-xl w-28">Edit</button>
+            <button class="bg-yellow rounded-lg text-white text-xl w-28">Ajukan</button>
+          </div>
+        </div>
 
     </div>
 
