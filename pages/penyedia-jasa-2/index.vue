@@ -7,7 +7,7 @@
     </div>
 
      <div class="grid grid-cols-12 gap-8 mx-auto mt-5">
-       <img src="~/assets/img/room.png" class="col-span-12 w-screen" alt="">
+       <img src="~/assets/img/sea.png" class="col-span-12 w-screen" alt="">
     </div>
 
     <div class="grid grid-cols-12 gap-8 mx-auto mt-5">
@@ -16,22 +16,22 @@
       </div>
        <div class="col-span-2">
           <div class="col-span-2">
-        <img src="~/assets/img/room-2.png" alt="">
+        <img src="~/assets/img/thumbnail-1.png" alt="">
       </div>
       </div>
        <div class="col-span-2">
           <div class="col-span-2">
-        <img src="~/assets/img/room-2.png" alt="">
+        <img src="~/assets/img/thumbnail-2.png" alt="">
       </div>
       </div>
     </div>
 
 
     <div class="mx-auto">
-      <p class="text-black font-poppins text-3xl mt-8">Detail Penginapan</p> <br>
-         <div class="grid grid-cols-12 gap-8 mt-5">
+      <p class="text-black font-poppins text-3xl mt-8">Detail Perjalanan Wisata</p> <br>
+         <div class="grid grid-cols-12 gap-8 ">
            <div class="col-span-12">
-              <label class=" text-black font-poppins text-xl">Nama Penginapan</label>
+              <label class=" text-black font-poppins text-xl">Nama Agensi Trip</label>
               <input type="text" class="bg-gray-200 normal-height h-8 input-width rounded-xl h-28">
               <p class="bg-gray text-sm text-gray-400">isi sesuai di nama aslinya</p>
            </div>
@@ -39,14 +39,14 @@
 
         <div class="grid grid-cols-12 gap-8 mt-5">
            <div class="col-span-12 ">
-              <label class=" text-black font-poppins text-xl">Deskripsi Penginapan</label>
+              <label class=" text-black font-poppins text-xl">Deskripsi Perjalanan wisata</label>
               <input type="text" class="bg-gray-200 large-height h-8 input-width rounded-xl">
            </div>
         </div>
 
         <div class="grid grid-cols-12 gap-8 mt-5">
            <div class="col-span-12 ">
-              <label class=" text-black font-poppins text-xl">Pelayanan</label>
+              <label class=" text-black font-poppins text-xl">Intrnerary</label>
               <input type="text" class="bg-gray-200 normal-height h-8 input-width rounded-xl">
            </div>
         </div>
@@ -60,7 +60,7 @@
 
         <div class="grid grid-cols-12 gap-8 mt-5">
            <div class="col-span-12 ">
-              <label class=" text-black font-poppins text-xl">Tipe Kamar</label>
+              <label class=" text-black font-poppins text-xl">Fitur</label>
               <input type="text" class="bg-gray-200 normal-height input-width rounded-xl">
            </div>
         </div>
@@ -72,20 +72,7 @@
            </div>
         </div>
 
-        <div class="grid grid-cols-12 gap-8 mt-5">
-           <div class="col-span-12 ">
-              <label class=" text-black font-poppins text-xl">Nomor telepon</label>
-              <input type="text" class="bg-gray-200 normal-height input-width rounded-xl">
-           </div>
-        </div>
 
-
-        <div class="grid grid-cols-12 mt-5">
-          <div class="col-span-4 col-start-10">
-            <button class="bg-yellow rounded-lg text-white text-xl w-28">Edit</button>
-            <button class="bg-yellow rounded-lg text-white text-xl w-28">Ajukan</button>
-          </div>
-        </div>
     </div>
 
   </div>

@@ -186,13 +186,13 @@
       <p class="text-gray-400 text-sm pt-5">Temukan penginapan yang pas untuk staycationmu</p>
 
       <div class="flex justify-center mt-7">
-        <div>
-          <img class="mx-4" src="~/assets/img/villa.png" alt="">
+        <div class="mx-4">
+          <img class="" src="~/assets/img/villa.png" alt="">
           <p class="text-left ml-8 font-bold text-2xl mt-5">Villa</p>
           <p class="text-left text-sm ml-8">3000+ Property</p>
         </div>
-         <div>
-          <img class="mx-4" src="~/assets/img/gamping.png" alt="">
+         <div class="mx-4">
+          <img class="" src="~/assets/img/gamping.png" alt="">
           <p class="text-left ml-8 font-bold text-2xl mt-5">Glamping</p>
           <p class="text-left text-sm ml-8">570+ Property</p>
         </div>
@@ -200,13 +200,13 @@
 
       <div class="flex justify-center mt-7">
 
-        <div>
-          <img class="mx-4" src="~/assets/img/apartement.png" alt="">
+        <div class="mx-4">
+          <img class="mx-4 mr-5" src="~/assets/img/apartement.png" alt="">
           <p class="text-left ml-8 font-bold text-2xl mt-5">Apartement</p>
           <p class="text-left text-sm ml-8">1500+ Property</p>
         </div>
-         <div>
-          <img class="mx-4" src="~/assets/img/hotel.png" alt="">
+         <div class="mx-4">
+          <img class="mx-4 " src="~/assets/img/hotel.png" alt="">
           <p class="text-left ml-8 font-bold text-2xl mt-5">Hotel</p>
           <p class="text-left text-sm ml-8">600+ Property</p>
         </div>
