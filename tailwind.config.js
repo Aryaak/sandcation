@@ -22,7 +22,7 @@ module.exports = {
         gray: colors.blueGray,
         coolgray: colors.coolGray,
         blue: '#5392F9',
-        red: colors.rose,
+        red: '#FF7171',
         pink: colors.fuchsia,
         green: colors.green,
         },
