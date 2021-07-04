@@ -36,9 +36,14 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     '@nuxtjs/dotenv',
+    '@nuxtjs/moment',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
   ],
+  moment: {
+    defaultLocale: 'de',
+    locales: ['id']
+  },
 
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',

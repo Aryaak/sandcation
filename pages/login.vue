@@ -1,17 +1,17 @@
 <template>
   <div class="grid grid-cols-2 h-full">
     <Loading />
-    <nuxt-link to="/">
-      <div class="relative">
-        <img class="h-full" src="~/assets/img/login-image.jpg" />
-      </div>
-    </nuxt-link>
+    <div class="relative">
+      <img class="h-full" src="~/assets/img/login-image.jpg" />
+    </div>
     <div>
       <div class="mt-16">
-        <div class="grid grid-flow-col grid-cols-3 gap-4">
-          <img class="block ml-auto" src="~assets/img/logo.png" />
-          <h2 class="text-left font-bold text-3xl">sandcation</h2>
-        </div>
+        <nuxt-link to="/">
+          <div class="grid grid-flow-col grid-cols-3 gap-4">
+            <img class="block ml-auto" src="~assets/img/logo.png" />
+            <h2 class="text-left font-bold text-3xl">sandcation</h2>
+          </div>
+        </nuxt-link>
 
         <h2 class="text-left font-bold text-5xl mt-10">Login.</h2>
         <p class="text-grey">Mulai perjalanan serumu dari sini</p>
@@ -112,7 +112,7 @@ export default {
         password: this.password,
       });
       this.setLoading(false);
-      this.$router.push("/");
+      document.location.href = "/";
     },
   },
 };

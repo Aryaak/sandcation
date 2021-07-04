@@ -3,27 +3,33 @@
     <div class="flex items-center mb-5">
       <img src="~assets/img/profile.png" />
       <div>
-        <p class="font-bold">Jhon Doe</p>
-        <p class="text-grey">10/02/2003</p>
+        <p class="font-bold">{{ review.user.name }}</p>
+        <p class="text-grey">{{ date }}</p>
       </div>
     </div>
     <div class="flex gap-2 mb-5">
-      <img src="~assets/img/star.png" />
-      <img src="~assets/img/star.png" />
-      <img src="~assets/img/star.png" />
-      <img src="~assets/img/star.png" />
-      <img src="~assets/img/star.png" />
+      <img v-for="i of review.stars" :key="i" src="~assets/img/star.png" />
     </div>
     <p>
-      Pelayanannya bagus! Karyawannya ramah-ramah (secara keseluruhan ya) dari
-      satpam, banquet, koki. Nice hotel, viewnya juga bagus btw, tapi sayangnya
-      ga bisa sembarangan karena untuk komersil ternyata.
+      {{ review.review }}
     </p>
   </div>
 </template>
 
 <script>
-export default {};
+import moment from "moment";
+export default {
+  data() {
+    return {
+      date: "",
+    };
+  },
+  props: ["review"],
+  created() {
+    let date = moment(this.review.created_at);
+    this.date = date.fromNow();
+  },
+};
 </script>
 
 <style scoped>
