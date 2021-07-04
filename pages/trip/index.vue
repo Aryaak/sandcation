@@ -8,6 +8,7 @@
           text-white
           font-bold
           xl:text-6xl
+          xs:text-sm
           text-3xl
           xl:left-20
           xl:top-40
