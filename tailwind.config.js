@@ -62,7 +62,7 @@ module.exports = {
        'md': '16px',
        'lg': '24px',
        'xl': '48px',
-       '2xl' : '26rem',
+       '2xl' : '20rem',
        '3xl' : '45rem'
       },
 

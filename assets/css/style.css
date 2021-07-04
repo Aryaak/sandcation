@@ -101,3 +101,19 @@
 .profile_nav_active img {
   filter: brightness(0) invert(1);
 }
+
+.box-bed {
+  margin: 0 auto;
+}
+
+.input-width {
+  width: 100%;
+}
+
+.normal-height {
+  height: 4rem;
+}
+
+.large-height {
+  height: 8rem;
+}
