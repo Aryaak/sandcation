@@ -4,7 +4,7 @@
     <div class="grid grid-cols-12 justify-items-end gap-10 mt-10 xl:mb-10 mb-5">
       <div class="bg-semiGray w-full rounded-lg py-8 col-span-4">
         <div class="text-center mb-10">
-          <img class="block mx-auto w-6/12" src="~assets/img/foto.png" />
+          <img class="block mx-auto w-6/12" src="~assets/img/Foto.png" />
           <p class="text-grey mt-2">Selamat Datang</p>
           <h4 class="font-bold text-2xl">{{ getUser.name }}</h4>
         </div>
