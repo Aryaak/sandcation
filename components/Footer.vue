@@ -1,6 +1,17 @@
 <template>
-  <footer class="bg-mdGray absolute w-full left-0 h-max py-10">
-    <div class="container mx-auto flex justify-between">
+  <footer class="bg-mdGray absolute w-full left-0 h-max py-10 xl:mt-20 mt-10">
+    <div
+      class="
+        xl:container
+        mx-auto
+        flex
+        justify-between
+        xl:flex-row
+        flex-col
+        xl:px-16
+        px-10
+      "
+    >
       <div>
         <div class="flex items-center gap-8 mb-5">
           <img src="~assets/img/logo-lg.png" />
