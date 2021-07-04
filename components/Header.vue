@@ -21,12 +21,17 @@
           <nuxt-link to="/trip">Paket Trip</nuxt-link>
         </li>
       </ul>
-      <div class="xl:block hidden col-span-2 ml-10">
+      <div v-if="!getLoged" class="xl:block hidden col-span-2 ml-10">
         <nuxt-link to="/register"
           ><button class="bg-yellow px-5 py-2 rounded-lg text-white">
             Masuk
           </button></nuxt-link
         >
+      </div>
+      <div v-if="getLoged" class="xl:block hidden col-span-2 ml-10">
+        <nuxt-link :to="'/profile/' + getUser.id"
+          ><span class="font-bold">Hi, {{ getUser.name }}</span>
+        </nuxt-link>
       </div>
     </nav>
     <!-- End Nav for medium -> larage device -->
@@ -90,32 +95,55 @@
         <li :class="{ nav_active: active == 'trip' }">
           <nuxt-link to="/trip">Paket Trip</nuxt-link>
         </li>
-        <li>
+
+        <li v-if="!getLoged" class="xl:block hidden col-span-2 ml-10">
           <nuxt-link to="/register"
             ><button class="bg-yellow px-5 py-2 rounded-lg text-white">
               Masuk
             </button></nuxt-link
           >
         </li>
+        <li v-if="getLoged" class="xl:block hidden col-span-2 ml-10">
+          <nuxt-link :to="'/profile/' + getUser.id"
+            ><span class="font-bold">Hi, {{ getUser.name }}</span>
+          </nuxt-link>
+        </li>
       </ul>
     </nav>
+
     <!-- End Nav for small device -->
     <nav></nav>
   </div>
 </template>
 
 <script>
+import { mapActions, mapGetters } from "vuex";
+
 export default {
   props: ["active"],
   data() {
     return {
       show: false,
+      loged: false,
     };
   },
   methods: {
+    ...mapActions({
+      profile: "auth/profile",
+    }),
+
     showNav() {
       this.show = this.show ? false : true;
     },
+  },
+  computed: mapGetters({
+    getLoged: "auth/getLoged",
+    getUser: "auth/getUser",
+  }),
+  created() {
+    if (this.getLoged) {
+      // this.profile();
+    }
   },
 };
 </script>

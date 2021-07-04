@@ -1,15 +1,17 @@
 <template>
   <div class="grid grid-cols-2 h-full">
+    <Loading />
     <div>
       <img class="h-full fixed" src="~/assets/img/register-image.jpg" />
     </div>
     <div class="my-16">
       <div>
-        <div class="grid grid-flow-col grid-cols-3 gap-4">
-          <img class="block ml-auto" src="~assets/img/logo.png" />
-          <h2 class="text-left font-bold text-3xl">sandcation</h2>
-        </div>
-
+        <nuxt-link to="/">
+          <div class="grid grid-flow-col grid-cols-3 gap-4">
+            <img class="block ml-auto" src="~assets/img/logo.png" />
+            <h2 class="text-left font-bold text-3xl">sandcation</h2>
+          </div>
+        </nuxt-link>
         <h2 class="text-left font-bold text-5xl mt-10">Register.</h2>
         <p class="text-grey">Mulai perjalanan serumu dari sini</p>
 
@@ -19,6 +21,9 @@
           </p>
           <p v-if="!validate_password" class="text-danger mb-5 italic">
             Password tidak sesuai!
+          </p>
+          <p v-if="!validate_email" class="text-danger mb-5 italic">
+            Email tidak valid
           </p>
           <input
             v-model="name"
@@ -95,7 +100,7 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions, mapMutations } from "vuex";
 
 export default {
   data() {
@@ -106,6 +111,7 @@ export default {
       c_password: "",
       validate: true,
       validate_password: true,
+      validate_email: true,
     };
   },
 
@@ -113,9 +119,13 @@ export default {
     ...mapActions({
       register: "auth/register",
     }),
-    submit() {
+    ...mapMutations({
+      setLoading: "setLoading",
+    }),
+    async submit() {
       this.validate = true;
       this.validate_password = true;
+      this.validate_email = true;
 
       if (!this.name || !this.email || !this.password || !this.c_password) {
         this.validate = false;
@@ -126,12 +136,22 @@ export default {
         return;
       }
 
-      this.register({
+      const re =
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      const emailValid = re.test(String(this.email).toLowerCase());
+      if (!emailValid) {
+        this.validate_email = false;
+        return;
+      }
+      this.setLoading(true);
+      await this.register({
         name: this.name,
         email: this.email,
         password: this.password,
         c_password: this.c_password,
       });
+      this.setLoading(false);
+      this.$router.push("/");
     },
   },
 };

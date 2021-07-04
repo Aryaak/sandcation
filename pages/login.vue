@@ -1,10 +1,11 @@
 <template>
   <div class="grid grid-cols-2 h-full">
     <Loading />
-    <div class="relative">
-      <h1 class="absolute right-24">Mari Liburan bersama Sandcation</h1>
-      <img class="h-full" src="~/assets/img/login-image.jpg" />
-    </div>
+    <nuxt-link to="/">
+      <div class="relative">
+        <img class="h-full" src="~/assets/img/login-image.jpg" />
+      </div>
+    </nuxt-link>
     <div>
       <div class="mt-16">
         <div class="grid grid-flow-col grid-cols-3 gap-4">
@@ -18,6 +19,9 @@
         <div class="mt-10">
           <p v-if="!validate" class="text-danger mb-5 italic">
             Harap isi semua kolom!
+          </p>
+          <p v-if="!validate_email" class="text-danger mb-5 italic">
+            Email tidak valid
           </p>
           <input
             v-model="email"
@@ -69,7 +73,7 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions, mapMutations } from "vuex";
 
 export default {
   data() {
@@ -77,6 +81,7 @@ export default {
       email: "",
       password: "",
       validate: true,
+      validate_email: true,
     };
   },
 
@@ -84,16 +89,30 @@ export default {
     ...mapActions({
       login: "auth/login",
     }),
-    submit() {
+    ...mapMutations({
+      setLoading: "setLoading",
+    }),
+    async submit() {
       this.validate = true;
+      this.validate_email = true;
       if (!this.email || !this.password) {
         this.validate = false;
         return;
       }
-      this.login({
+      const re =
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      const emailValid = re.test(String(this.email).toLowerCase());
+      if (!emailValid) {
+        this.validate_email = false;
+        return;
+      }
+      this.setLoading(true);
+      await this.login({
         email: this.email,
         password: this.password,
       });
+      this.setLoading(false);
+      this.$router.push("/");
     },
   },
 };

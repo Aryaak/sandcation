@@ -72,18 +72,32 @@
   right: 0;
 }
 
-.sea-img{
+.sea-img {
   background-image: url('~/assets/img/laut.png');
   background-size: cover;
   max-height: max-content;
 }
 
-.sea-title{
+.sea-title {
   font-size: 50px;
   margin-top: 14rem;
   font-weight: 900;
 }
 
-.paket-text{
+.paket-text {
   text-align: center;
+}
+
+.profile_nav_active {
+  background-color: #FBA83C;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  color: white !important;
+  font-size: 1.4em;
+  border-radius: 20px 0 20px 0;
+
+}
+
+.profile_nav_active img {
+  filter: brightness(0) invert(1);
 }
