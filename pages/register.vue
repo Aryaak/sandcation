@@ -151,9 +151,11 @@ export default {
         c_password: this.c_password,
       });
       this.setLoading(false);
-      this.$router.push("/");
+      document.location.href = "/";
     },
   },
+
+  created() {},
 };
 </script>
 

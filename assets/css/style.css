@@ -117,3 +117,17 @@
 .large-height {
   height: 8rem;
 }
+
+.modal-booking {
+  position: fixed;
+  padding: 20px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: white;
+  border-radius: 20px;
+  border: 2px solid #FBA83C;
+  overflow: scroll;
+}

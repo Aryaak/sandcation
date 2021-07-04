@@ -1,7 +1,7 @@
 import axios  from "axios";
 
 export const state = () => ({
-    loged: false
+    loged: false,
 });
 
 export const getters = {
@@ -61,7 +61,7 @@ export const actions = {
     async logout({rootState, commit, getters }){
         await axios({ 
             url: rootState.base_api_url + 'logout',
-            method:'get',
+            method:'post',
             headers : {
                 Authorization : "Bearer " + getters.getToken
             }
@@ -78,6 +78,7 @@ export const actions = {
 export const mutations = {
     setTokenSession(state, data){
         state.loged = true;
+        state.token = data.token;
         sessionStorage.setItem('token', data.token);
     },
     setUserSession(state, data){

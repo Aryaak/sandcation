@@ -63,11 +63,6 @@
 import { mapActions, mapGetters } from "vuex";
 
 export default {
-  middleware({ store, redirect }) {
-    //   return redirect("/login");
-    // }
-    console.log(store.getters.auth);
-  },
   data() {
     return {
       nav: localStorage.getItem("profile_nav") || "profile",
@@ -81,11 +76,17 @@ export default {
       localStorage.setItem("profile_nav", nav);
       this.nav = nav;
     },
-    submit() {
-      this.logout();
+    async submit() {
+      await this.logout();
+      location.reload();
     },
   },
   computed: mapGetters({ getUser: "auth/getUser" }),
+  created() {
+    if (!this.getUser) {
+      this.$router.push("/register");
+    }
+  },
 };
 </script>
 

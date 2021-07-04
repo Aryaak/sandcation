@@ -27,22 +27,32 @@
       </p>
     </div>
     <div class="grid xl:grid-cols-3 grid-cols-1 gap-10 xl:mb-20 mb-10">
-      <Penginapan />
-      <Penginapan />
-      <Penginapan />
-      <Penginapan />
-      <Penginapan />
-      <Penginapan />
-      <Penginapan />
-      <Penginapan />
-      <Penginapan />
+      <Penginapan
+        v-for="hostel in getHostels"
+        :key="hostel.id"
+        :hostel="hostel"
+      />
     </div>
     <Footer />
   </div>
 </template>
 
 <script>
-export default {};
+import { mapActions, mapGetters } from "vuex";
+export default {
+  data() {
+    return {};
+  },
+  methods: {
+    ...mapActions({
+      fetchHostels: "hostel/fetchHostels",
+    }),
+  },
+  computed: mapGetters({ getHostels: "hostel/getHostels" }),
+  created() {
+    this.fetchHostels();
+  },
+};
 </script>
 
 <style scoped>
