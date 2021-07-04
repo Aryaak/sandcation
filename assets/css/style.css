@@ -119,6 +119,12 @@
   height: 8rem;
 }
 
+
+
+.small-height{
+  height: 3rem;
+}
+
 .modal-booking {
   position: fixed;
   padding: 20px;
@@ -131,4 +137,5 @@
   border-radius: 20px;
   border: 2px solid #FBA83C;
   overflow: scroll;
+
 }
