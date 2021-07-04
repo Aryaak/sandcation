@@ -3,7 +3,7 @@
       <Header/>
       <div class="mx-auto">
           <div class="grid grid-cols-12 gap-8">
-            <p class="col-span-12 text-3xl font-poppins mt-12 font-bold">Detail Pemesanan</p>
+            <p class="col-span-12 xl:text-3xl sm:text-xl font-poppins mt-12 font-bold">Detail Pemesanan</p>
           </div>
 
           <div class="grid grid-cols-12 gap-4">
@@ -14,14 +14,14 @@
           </div>
 
            <div class="grid grid-cols-12 gap-4 mt-8">
-            <div class="col-span-3">
+            <div class="col-span-4">
                   <select name="cars" class="input-width bg-gray-200 normal-height">
                     <option value="+62" class="text-center">+62</option>
                   </select>
                  <p class="text-sm text-gray-400">kode negara</p>
             </div>
 
-            <div class="col-span-9">
+            <div class="col-span-8">
               <input type="number" class="input-width bg-gray-200 normal-height">
               <p class="text-gray-400 text-sm" min="0">Nomor telepon</p>
             </div>
@@ -35,7 +35,7 @@
           </div>
 
           <div class="grid grid-cols-12 gap-8">
-            <p class="col-span-12 text-3xl font-poppins mt-12 font-bold">Detail Pemesanan</p>
+            <p class="col-span-12 xl:text-3xl sm:text-xl font-poppins mt-12 font-bold">Detail Pemesanan</p>
           </div>
 
           <div class="grid grid-cols-12 gap-4">
@@ -59,7 +59,7 @@
           </div>
 
           <div class="grid grid-cols-12 gap-8">
-            <p class="col-span-12 text-3xl font-poppins mt-12 font-bold">Permintaan Khusus</p>
+            <p class="col-span-12 xl:text-3xl sm:text-xl font-poppins mt-12 font-bold">Permintaan Khusus</p>
           </div>
 
           <div class="grid grid-cols-12 gap-4 mt-8">
